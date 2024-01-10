@@ -12,7 +12,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [Solution](https://github.com/jrfullstack/Frontend-Mentor-FAQ-accordion-solution)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://jr-faq-accordion-solution-fm.netlify.app/)
 
 ## My process
 
