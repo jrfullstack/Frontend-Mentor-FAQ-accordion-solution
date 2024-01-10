@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  /* background-image: ; */
+  /* background-color: ; */
+  background: no-repeat top/100%
+    url(/assets/images/background-pattern-desktop.svg) 
+    var(--Light-pink);
+}
+
+body p {
+  font-size: 1rem;
+}
+
+.container {
+  display: grid;
+  min-height: 90vh;  
+  place-items: center;
+  margin: 10px;
+}
+
+.summary {
+  max-width: 30rem;
+  background-color: var(--White);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.summary-title {
+  display: flex;
+}
+
+.summary-title h1 {
+  margin-left: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.summary-title img {
+  width: 1.8rem;
+}
+
+
+details {
+  margin: 20px 0;  
+}
+
+details svg {
+  min-width: 30px;
+}
+
+.svg-close {
+  display: none;
+}
+
+details[open] .svg-close{
+  display: inline;
+}
+
+details[open] .svg-open {
+  display: none;
+}
+
+summary {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+details p {
+  color: var(--Grayish-purple);
+  line-height: 1.3;
+  margin-top: 10px;  
+}
+
+hr {
+  opacity: 0.2;
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  /* Arreglar */
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+
+details[open] summary~* {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
